@@ -2,31 +2,26 @@
 using System.Collections;
 
 [RequireComponent (typeof (Rigidbody))]
+[RequireComponent (typeof (PlayerMoveC))]
 public class Dasher : MonoBehaviour {
 	public float dashSpeed = 60f;
 	private bool isDone = true;
 	private Rigidbody rigidbody;
+	private PlayerMoveC playerMove;
 
-	public void Initialize(Rigidbody rigidbody)
+    void Update()
+    {
+    }
+
+	public void Dash()
 	{
-		this.rigidbody = rigidbody;
-	}
-	public void Do()
-	{
-		// もし,左ボタンが押されれば
-		if(Input.GetMouseButtonDown(0)){
-			isDone = false;
-		}
-		// もし,左ボタンが離されれば
-		if(Input.GetMouseButtonUp(0) && !isDone) {
-			// ダッシュ
-			this.rigidbody.velocity += this.transform.forward * dashSpeed;
-			isDone = true;
-		}
+		// キャラクターの視線方向へ,速度をdivideNumber分割
+		rigidbody.velocity = Vector3.Slerp(rigidbody.velocity, transform.forward * playerMove.basicSpeed, 1 / playerMove.divideNumber);
 	}
 
 	// Use this for initialization
-	void Start () {+
-	
+	void Start () {
+		playerMove = GetComponent<PlayerMoveC> ();
+		rigidbody = GetComponent<Rigidbody> ();
 	}
 }

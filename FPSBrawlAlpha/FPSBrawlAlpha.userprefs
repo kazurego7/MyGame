@@ -1,9 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Script\CharacterMove\Dasher.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Script\CharacterMove\PlayerMoveC.cs">
     <Files>
-      <File FileName="Assets\Game\Script\CharacterMove\Dasher.cs" Line="29" Column="18" />
-      <File FileName="Assets\Game\Script\CharacterMove\PlayerMoveC.cs" Line="23" Column="4" />
+      <File FileName="Assets\Game\Script\CharacterMove\PlayerMoveC.cs" Line="20" Column="40" />
+      <File FileName="Assets\Game\Script\CharacterMove\Dasher.cs" Line="1" Column="1" />
+      <File FileName="Assets\Game\Script\CharacterMove\SmashCollision.cs" Line="1" Column="1" />
+      <File FileName="Assets\Game\Script\CharacterMove\CharacterState.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
