@@ -4,7 +4,8 @@ using System.Collections.Generic;
 
 [RequireComponent (typeof (Rigidbody))]
 [RequireComponent (typeof (CharacterState))]
-[RequireComponent (typeof (Dasher))]
+[RequireComponent (typeof (Booster))]
+[RequireComponent (typeof (Neutral))]
 public class PlayerMoveC : MonoBehaviour {
 
 	public float maxSpeed = 80f;
@@ -13,13 +14,15 @@ public class PlayerMoveC : MonoBehaviour {
 
 	Rigidbody rigidbody;
 	CharacterState characterState;
-	Dasher dasher;
+	Booster booster;
+	Neutral neutral;
 
 	// Use this for initialization
 	void Start () {
 		rigidbody = GetComponent<Rigidbody>();
 		characterState = GetComponent<CharacterState> ();
-		dasher = GetComponent<Dasher> ();
+		booster = GetComponent<Booster> ();
+		neutral = GetComponent<Neutral>();
 	}
 	
 	// Update is called once per frame
@@ -27,9 +30,10 @@ public class PlayerMoveC : MonoBehaviour {
 		characterState.Change ();
 		switch (characterState.Now) {
 		case CharacterState.State.Neutral:
+			neutral.BasicMove();
 			break;
 		case CharacterState.State.Dash:
-			dasher.Dash();
+			booster.Dash();
 			break;
 		case CharacterState.State.Scan:
 			break;

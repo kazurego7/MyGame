@@ -1,11 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Script\CharacterMove\PlayerMoveC.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Script\CharacterMove\Booster.cs">
     <Files>
-      <File FileName="Assets\Game\Script\CharacterMove\PlayerMoveC.cs" Line="20" Column="40" />
-      <File FileName="Assets\Game\Script\CharacterMove\Dasher.cs" Line="1" Column="1" />
+      <File FileName="Assets\Game\Script\CharacterMove\PlayerMoveC.cs" Line="20" Column="19" />
       <File FileName="Assets\Game\Script\CharacterMove\SmashCollision.cs" Line="1" Column="1" />
-      <File FileName="Assets\Game\Script\CharacterMove\CharacterState.cs" Line="1" Column="1" />
+      <File FileName="Assets\Game\Script\CharacterMove\CharacterState.cs" Line="43" Column="1" />
+      <File FileName="Assets\Game\Script\CharacterMove\Neutral.cs" Line="23" Column="36" />
+      <File FileName="Assets\Game\Script\CharacterVelocityDirectioner.cs" Line="17" Column="1" />
+      <File FileName="Assets\Game\Script\CharacterMove\Booster.cs" Line="26" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

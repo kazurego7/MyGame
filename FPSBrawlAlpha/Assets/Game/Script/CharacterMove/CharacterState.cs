@@ -12,19 +12,19 @@ public class CharacterState : MonoBehaviour {
 		case State.Neutral:
 			if(Input.GetMouseButton(0)){
 				Now = State.Dash;
-			} else if (Input.GetMouseButton(2)){
+			} else if (Input.GetMouseButton(1)){
 				Now = State.Scan;
 			}
 			break;
 		case State.Dash:
 			if(Input.GetMouseButtonUp(0)){
 				Now = State.Neutral;
-			}else if(Input.GetMouseButton(2)){
+			}else if(Input.GetMouseButton(1)){
 				Now = State.Scan;
 			}
 			break;
 		case State.Scan:
-			if(Input.GetMouseButtonUp(2)){
+			if(Input.GetMouseButtonUp(1)){
 				Now = State.Neutral;
 			}
 			break;
