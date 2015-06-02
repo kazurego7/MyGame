@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class CharacterState : MonoBehaviour {
-	public enum State {Neutral,Dash,Scan}
+	public enum State {Neutral,Dash,Scan,Accel,Deccel}
 	// 現在の状態
 	public State Now { get; private set; }
 
@@ -12,9 +12,11 @@ public class CharacterState : MonoBehaviour {
 		case State.Neutral:
 			if(Input.GetMouseButton(0)){
 				Now = State.Dash;
-			} else if (Input.GetMouseButton(1)){
+			}
+			if(Input.GetMouseButton(1)){
 				Now = State.Scan;
 			}
+			if()
 			break;
 		case State.Dash:
 			if(Input.GetMouseButtonUp(0)){
@@ -25,6 +27,11 @@ public class CharacterState : MonoBehaviour {
 			break;
 		case State.Scan:
 			if(Input.GetMouseButtonUp(1)){
+				Now = State.Neutral;
+			}
+			break;
+		case State.Accel:
+			if(Input.GetMouseButtonUp(0)){
 				Now = State.Neutral;
 			}
 			break;
