@@ -55,11 +55,10 @@
      <Compile Include="Assets\Game\Script\CharacterMove\CharacterInput.cs" />
      <Compile Include="Assets\Game\Script\CharacterMove\CharacterRotation.cs" />
      <Compile Include="Assets\Game\Script\CharacterMove\CharacterState.cs" />
+     <Compile Include="Assets\Game\Script\CharacterMove\Dasher.cs" />
      <Compile Include="Assets\Game\Script\CharacterMove\Direction.cs" />
      <Compile Include="Assets\Game\Script\CharacterMove\Neutral.cs" />
      <Compile Include="Assets\Game\Script\CharacterMove\PlayerMove.cs" />
-     <Compile Include="Assets\Game\Script\CharacterMove\PlayerMoveA.cs" />
-     <Compile Include="Assets\Game\Script\CharacterMove\PlayerMoveB.cs" />
      <Compile Include="Assets\Game\Script\CharacterMove\PlayerMoveC.cs" />
      <Compile Include="Assets\Game\Script\CharacterMove\SmashCollision.cs" />
      <Compile Include="Assets\Game\Script\CharacterMove\VelocityOfPreviousFrame.cs" />

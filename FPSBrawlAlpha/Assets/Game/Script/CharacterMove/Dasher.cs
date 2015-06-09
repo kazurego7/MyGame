@@ -6,7 +6,7 @@ using System.Collections;
 public class Dasher : MonoBehaviour {
 	public float dashSpeed = 60f;
 	private bool isDone = true;
-	private Rigidbody rigidbody;
+	private new Rigidbody rigidbody;
 	private PlayerMoveC playerMove;
 
     void Update()

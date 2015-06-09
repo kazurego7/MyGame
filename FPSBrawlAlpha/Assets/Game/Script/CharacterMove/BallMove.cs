@@ -9,10 +9,8 @@ public class BallMove : MonoBehaviour {
 	public float accel = 20f;
 	float curretSpeed = 0f;
 	Quaternion dirQua = new Quaternion();
-	Vector3 tmpVec = new Vector3();
 	// Use this for initialization
 	void Start () {
-		tmpVec = Vector3.forward;
 	}
 	
 	// Update is called once per frame

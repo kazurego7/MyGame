@@ -5,7 +5,7 @@ public class InvisibleCursor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Screen.lockCursor = true;
+		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
 	}
 	

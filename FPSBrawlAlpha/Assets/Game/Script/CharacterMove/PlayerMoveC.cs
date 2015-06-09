@@ -12,7 +12,7 @@ public class PlayerMoveC : MonoBehaviour {
 	public float basicSpeed = 60f;
 	public float divideNumber = 30f;
 
-	Rigidbody rigidbody;
+	new Rigidbody rigidbody;
 	CharacterState characterState;
 	Booster booster;
 	Neutral neutral;

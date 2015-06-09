@@ -4,9 +4,7 @@ using System.Collections;
 [RequireComponent (typeof (Rigidbody))]
 [RequireComponent (typeof (PlayerMoveC))]
 public class Booster : MonoBehaviour {
-	public float dashSpeed = 60f;
-	private bool isDone = true;
-	private Rigidbody rigidbody;
+	private new Rigidbody rigidbody;
 	private PlayerMoveC playerMove;
 
     void Update()

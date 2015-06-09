@@ -16,7 +16,6 @@ public class CharacterState : MonoBehaviour {
 			if(Input.GetMouseButton(1)){
 				Now = State.Scan;
 			}
-			if()
 			break;
 		case State.Dash:
 			if(Input.GetMouseButtonUp(0)){

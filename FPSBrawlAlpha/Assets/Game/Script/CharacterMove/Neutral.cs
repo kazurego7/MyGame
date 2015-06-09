@@ -6,7 +6,7 @@ using System.Collections;
 
 public class Neutral : MonoBehaviour {
 
-	Rigidbody rigidbody;
+	new Rigidbody rigidbody;
 	PlayerMoveC playerMove;
 
 	// Use this for initialization
