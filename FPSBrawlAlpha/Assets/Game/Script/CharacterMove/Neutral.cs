@@ -6,22 +6,35 @@ using System.Collections;
 
 public class Neutral : MonoBehaviour {
 
-	new Rigidbody rigidbody;
-	PlayerMoveC playerMove;
+	[SerializeField]
+	private float _acceleration = 10f;
+	public float Acceleration {
+		get { return _acceleration; }
+	}
+	[SerializeField]
+	private float _limitSpeed = 80f;
+	public float LimitSpeed {
+		get { return _limitSpeed; }
+	}
+
+	private new Rigidbody rigidbody;
+	private PlayerMoveC playerMove;
 
 	// Use this for initialization
 	void Start () {
-		rigidbody = GetComponent<Rigidbody>();
+		this.rigidbody = GetComponent<Rigidbody>();
 		playerMove = GetComponent<PlayerMoveC>();
 	}
 
-	public void BasicMove(){
+	public void TurnFront(){
 		// キャラクターの視線方向へ,速度をdivideNumber分割
-		rigidbody.velocity = Vector3.Slerp(rigidbody.velocity, transform.forward * playerMove.basicSpeed, 1 / playerMove.divideNumber);
+		this.rigidbody.velocity = Vector3.Slerp(this.rigidbody.velocity, transform.forward * this.rigidbody.velocity.magnitude, 1 / playerMove.divideNumber);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	public void SlowlyAccelerate() {
+		// ゆっくり加速
+		if(this.rigidbody.velocity.magnitude < LimitSpeed) {
+			this.rigidbody.velocity += this.rigidbody.velocity.normalized * Acceleration * Time.deltaTime;
+		}
 	}
 }

@@ -6,10 +6,11 @@ using System.Collections;
 public class Booster : MonoBehaviour {
 	private new Rigidbody rigidbody;
 	private PlayerMoveC playerMove;
+	
+	public void SlowlyAccelerate()
+	{
 
-    void Update()
-    {
-    }
+	}
 
 	public void Dash()
 	{

@@ -30,7 +30,7 @@ public class PlayerMoveC : MonoBehaviour {
 		characterState.Change ();
 		switch (characterState.Now) {
 		case CharacterState.State.Neutral:
-			neutral.BasicMove();
+			neutral.TurnFront();
 			break;
 		case CharacterState.State.Dash:
 			booster.Dash();
