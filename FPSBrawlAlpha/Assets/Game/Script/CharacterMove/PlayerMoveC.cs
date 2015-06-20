@@ -8,10 +8,6 @@ using System.Collections.Generic;
 [RequireComponent (typeof (Neutral))]
 public class PlayerMoveC : MonoBehaviour {
 
-	public float maxSpeed = 80f;
-	public float basicSpeed = 60f;
-	public float divideNumber = 30f;
-
 	new Rigidbody rigidbody;
 	CharacterState characterState;
 	Booster booster;
@@ -27,6 +23,7 @@ public class PlayerMoveC : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		neutral.PreLook = this.transform.forward;
 		characterState.Change ();
 		switch (characterState.Now) {
 		case CharacterState.State.Neutral:
